@@ -13,7 +13,7 @@ from envs import env
 
 HA_ENDPOINT = env('HA_APIENDPOINT') #'http://192.168.1.68:8123/api/services/script/turn_on'
 HA_APIPASS = env('HA_APIPASSWORD')
-PLATES = ['']
+PLATES = ['ZG1337TM', 'ZG3582FN','ZG4458GZ']
 RTSP_SOURCE  = env('STREAM_SOURCE') #'rtsp://192.168.0.60/mpeg4'
 WINDOW_NAME  = 'openalpr'
 FRAME_SKIP   = 10
@@ -23,7 +23,7 @@ def open_cam_rtsp(uri):
     return cv2.VideoCapture(uri)
 
 def main():
-    alpr = Alpr('gb', '/srv/openalpr/openalpr.conf', '/srv/openalpr/runtime_data')
+    alpr = Alpr('eu', '/srv/openalpr/openalpr.conf', '/srv/openalpr/runtime_data')
     if not alpr.is_loaded():
         print('Error loading OpenALPR')
         sys.exit(1)
