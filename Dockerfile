@@ -30,7 +30,7 @@ RUN apt-get install python3-pip -qq
 RUN pip3 install openalpr
 RUN pip3 install numpy
 RUN pip3 install requests
-RUN pip3 install opencv-python
+RUN pip3 install opencv-python==4.2.0.34
 RUN pip3 install envs
 
 #Fix the terrasact-ocr issue by updating the lib
